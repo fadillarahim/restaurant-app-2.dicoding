@@ -2,7 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 
 import { async } from 'regenerator-runtime';
-import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
+import FavoriteRestaurantdb from '../data/favorite-restaurant-idb';
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
 
 /* eslint-disable no-unused-vars */
@@ -25,7 +25,7 @@ const LikeButtonInitiator = {
   },
 
   async _isRestaurantExist(id) {
-    const restaurant = await FavoriteRestaurantIdb.getRestaurant(id);
+    const restaurant = await FavoriteRestaurantdb.getRestaurant(id);
     return !!restaurant;
   },
 
@@ -34,7 +34,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
+      await FavoriteRestaurantdb.putRestaurant(this._restaurant);
       this._renderButton();
     });
   },
@@ -44,7 +44,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
+      await FavoriteRestaurantdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
     });
   },

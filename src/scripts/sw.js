@@ -23,11 +23,10 @@ self.addEventListener('fetch', (event) => {
 
 const assetsToCache = [
   './',
-  './icons/maskable_icon.png',
-  './icons/maskable_icon_x192.png',
-  './icons/maskable_icon_x256.png',
-  './icons/maskable_icon_x384.png',
-  './icons/maskable_icon_x512.png',
+  './icons/icon-192x192.png',
+  './icons/icon-256x256.png',
+  './icons/icon-384x384.png',
+  './icons/icon-512x512.png',
   './index.html',
   './favicon.png',
   './hero-image_2.jpg',

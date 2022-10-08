@@ -8,6 +8,8 @@ import {
   createRestoListFood,
   createRestoListDrink,
   createRestoListReview,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 } from '../templates/template-creator';
 
 const Detail = {
@@ -45,7 +47,7 @@ const Detail = {
         city: restaurant.city,
         rating: restaurant.rating,
         pictureId: restaurant.pictureId,
-        overview: restaurant.description,
+        description: restaurant.description,
       },
 
     });
